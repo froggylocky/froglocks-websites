@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>froglock's links</title>
+  <link rel="icon" href="https://u.cubeupload.com/froglock/8dc15a17d3091f9c25ee.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="desktop">
+    <div class="window main-window" id="main-window">
+      <div class="title-bar">
+        <span class="title-bar-icon">📁</span>
+        <span class="title-bar-text">froglock's links - My Computer</span>
+        <div class="title-bar-buttons">
+          <button type="button" class="win-btn minimize" aria-label="Minimize" onclick="toggleMinimize()"></button>
+          <button type="button" class="win-btn maximize" aria-label="Maximize" id="maximize-btn" onclick="toggleMaximize()"></button>
+          <button type="button" class="win-btn close" aria-label="Close" onclick="window.close()"></button>
+        </div>
+      </div>
+      <div class="menu-bar">
+        <span class="menu-item">File</span>
+        <span class="menu-item">Edit</span>
+        <span class="menu-item">View</span>
+        <span class="menu-item">Favorites</span>
+        <span class="menu-item">Help</span>
+      </div>
+      <div class="window-body">
+        <div class="section">
+          <div class="section-title">
+            <span class="folder-icon">📂</span> My Websites
+          </div>
+          <ul class="link-list">
+            <li><a href="https://the-sexuality-test.vercel.app/" target="_blank" rel="noopener">🔗 THE sexuality test</a></li>
+            <li><a href="https://pjsk-pfp-frame-maker.vercel.app/" target="_blank" rel="noopener">🔗 PJSK Frame Maker</a></li>
+            <li><a href="https://e-to-h-badge-maker.vercel.app/" target="_blank" rel="noopener">🔗 EToH Badge Maker</a></li>
+            <li><a href="https://stupid-fucking-calc.vercel.app/" target="_blank" rel="noopener">🔗 stupid fucking calc</a></li>
+            <li><a href="https://plsiwannamakefontwithmyownhandrwrit.vercel.app/" target="_blank" rel="noopener">🔗 Draw Your Font</a></li>
+          </ul>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            <span class="folder-icon">📂</span> All My Links
+          </div>
+          <p class="hint">From <a href="https://linktr.ee/froggolock" target="_blank" rel="noopener">linktr.ee/froggolock</a></p>
+          <ul class="link-list" id="my-links">
+            <li><a href="https://linktr.ee/froggolock" target="_blank" rel="noopener">🔗 Linktree (all links)</a></li>
+            <li><a href="https://www.instagram.com/froggolock/" target="_blank" rel="noopener">🔗 Instagram</a></li>
+            <li><a href="https://www.youtube.com/@froggolock" target="_blank" rel="noopener">🔗 YouTube</a></li>
+            <li><a href="https://x.com/froggolock" target="_blank" rel="noopener">🔗 X</a></li>
+            <li><a href="https://open.spotify.com/user/froggolock" target="_blank" rel="noopener">🔗 Spotify</a></li>
+            <li><a href="https://www.roblox.com/users/81655785/profile" target="_blank" rel="noopener">🔗 iFrogLock's Profile (Roblox)</a></li>
+            <li><a href="https://giphy.com/froglock" target="_blank" rel="noopener">🔗 froglock GIFs on GIPHY</a></li>
+            <li><a href="https://polytoria.com" target="_blank" rel="noopener">🔗 Polytoria</a></li>
+            <li><a href="https://gdbrowser.com" target="_blank" rel="noopener">🔗 GDBrowser</a></li>
+            <li><a href="https://github.com/froggylocky" target="_blank" rel="noopener">🔗 GitHub</a></li>
+            <li><a href="https://poopynayenayes.newgrounds.com/" target="_blank" rel="noopener">🔗 Newgrounds</a></li>
+            <li><a href="https://hhhhhhhhhh1.itch.io/" target="_blank" rel="noopener">🔗 itch.io</a></li>
+          </ul>
+        </div>
+        <div class="status-bar">
+          <span>17 objects</span>
+          <span class="status-right">froglock inc.</span>
+        </div>
+      </div>
+    </div>
+    <div class="taskbar" id="taskbar" style="display: none;">
+      <button type="button" class="taskbar-btn" id="taskbar-restore" onclick="toggleMinimize()">📁 froglock's links</button>
+    </div>
+  </div>
+  <script>
+    function toggleMinimize() {
+      var w = document.getElementById('main-window');
+      var tb = document.getElementById('taskbar');
+      if (w.classList.contains('window--minimized')) {
+        w.classList.remove('window--minimized');
+        tb.style.display = 'none';
+      } else {
+        w.classList.add('window--minimized');
+        tb.style.display = 'flex';
+      }
+    }
+    function toggleMaximize() {
+      var w = document.getElementById('main-window');
+      var btn = document.getElementById('maximize-btn');
+      w.classList.toggle('window--maximized');
+      btn.classList.toggle('restore', w.classList.contains('window--maximized'));
+      btn.setAttribute('aria-label', w.classList.contains('window--maximized') ? 'Restore' : 'Maximize');
+    }
+  </script>
+</body>
+</html>
